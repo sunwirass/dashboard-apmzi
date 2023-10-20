@@ -22,7 +22,7 @@
 <section class="features-icons bg-light text-center">
     <div class="container">
         <div class="row">
-            <a class="navbar-menu col-lg-6" href="#">
+            <a class="navbar-menu col-lg-6" href="/zi">
                 <div class="col-lg-12">
                     <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
                         <div class="features-icons-icon d-flex"><i class="bi-files m-auto"></i></div>
@@ -31,7 +31,7 @@
                     </div>
                 </div>
             </a>
-            <a class="navbar-menu col-lg-6" href="#">
+            <a class="navbar-menu col-lg-6" href="/apm">
                 <div class="col-lg-12">
                     <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
                         <div class="features-icons-icon d-flex"><i class="bi-files m-auto"></i></div>
