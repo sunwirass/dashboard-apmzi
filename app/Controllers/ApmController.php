@@ -2,77 +2,45 @@
 
 namespace App\Controllers;
 
+use App\Models\KriteriaModel;
+use App\Models\IndikatorModel;
+
 class ApmController extends BaseController
 {
+    protected $kriteriaModel;
+    protected $indikatorModel;
+
+    public function __construct()
+    {
+        $this->kriteriaModel = new KriteriaModel();
+        $this->indikatorModel = new IndikatorModel();
+    }
+
     public function index()
     {
-        $data = [
-            'title' => 'Dokumen APM'
-        ];
+        $kriteria = $this->kriteriaModel->findAll();
 
-        return view('pages/apm', $data);
+        $data = [
+            'title' => 'Dokumen APM',
+            'kriteria' => $kriteria
+        ];
+        return view('pages/apm/index', $data);
     }
 
-    public function kepemimpinan()
+    public function kriteria($slug)
     {
+        $kriteria = $this->kriteriaModel->where(['slug' => $slug])->first();
         $data = [
-            'title' => 'APM - Kepemimpinan'
+            'title' => 'APM - Kepemimpinan',
+            'name' => $kriteria['name'],
+            'indikator' => $this->indikatorModel->where(['id_kriteria' => $kriteria['id']])->findAll()
         ];
 
-        return view('pages/apm/kepemimpinan', $data);
+        return view('pages/apm/detil_kriteria', $data);
     }
 
-    public function manpro()
+    public function detilKriteria($slug, $order)
     {
-        $data = [
-            'title' => 'APM - Manajemen Proses'
-        ];
-
-        return view('pages/apm/manpro', $data);
-    }
-
-    public function renstra()
-    {
-        $data = [
-            'title' => 'APM - Rencana Strategis'
-        ];
-
-        return view('pages/apm/renstra', $data);
-    }
-
-    public function msdm()
-    {
-        $data = [
-            'title' => 'APM - Pengelolaan Sumber Daya'
-        ];
-
-        return view('pages/apm/msdm', $data);
-    }
-
-    public function kinerja()
-    {
-        $data = [
-            'title' => 'APM - Hasil Kinerja'
-        ];
-
-        return view('pages/apm/kinerja', $data);
-    }
-
-    public function kwlayanan()
-    {
-        $data = [
-            'title' => 'APM - Kualitas Layanan'
-        ];
-
-        return view('pages/apm/kwlayanan', $data);
-    }
-
-    public function dokumentasi()
-    {
-        $data = [
-            'title' => 'APM - Dokumentasi/Arsip'
-        ];
-
-        return view('pages/apm/dokumentasi', $data);
+        echo $slug . " " . $order;
     }
 }

@@ -13,21 +13,12 @@ class Pages extends BaseController
         return view('pages/home', $data);
     }
 
-    public function pageapm()
-    {
-        $data = [
-            'title' => 'Dokumen APM'
-        ];
-
-        return view('pages/apm', $data);
-    }
-
-    public function pagezi()
+    public function mainZI()
     {
         $data = [
             'title' => 'Dokumen ZI'
         ];
 
-        return view('pages/zi', $data);
+        return view('pages/zi/index', $data);
     }
 }

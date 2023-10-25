@@ -92,6 +92,10 @@
     }
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0 auto;
     width: 100%;
@@ -12734,6 +12738,6 @@ header.masthead .h1 {
 }
 
 footer.footer {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }

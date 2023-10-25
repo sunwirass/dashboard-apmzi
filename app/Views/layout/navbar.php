@@ -1,7 +1,7 @@
-<nav class="navbar navbar-light bg-light static-top">
+<nav class="navbar navbar-light bg-light fixed-top">
     <div class="container">
         <span class="navbar-brand">
-            <a class="navbar-brand" href="#"><img src="/img/logo-pn.png" alt="Logo PN Payakumbuh">PENGADILAN NEGERI PAYAKUMBUH</a>
+            <a class="navbar-brand" href="/"><img src="<?= base_url() ?>img/logo-pn.png" alt="Logo PN Payakumbuh">PENGADILAN NEGERI PAYAKUMBUH</a>
         </span>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
