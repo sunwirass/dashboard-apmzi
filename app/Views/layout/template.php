@@ -21,11 +21,37 @@
     <!-- Load Stylesheet -->
 
     <link href="<?= base_url() ?>css/styles.css" rel="stylesheet" />
+    <link href="<?= base_url() ?>css/loading.css" rel="stylesheet" />
+
+    <!-- Loading Javascript -->
+    <!-- <script src="<?= base_url() ?>js/script.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
 
     <title><?= $title; ?></title>
 </head>
 
-<body>
+<body onload="hide_loading();">
+    <!-- Loading Page -->
+    <div class="loading overlay">
+        <div class="lds-spinner">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
     <!-- Navigation-->
     <?= $this->include('layout/navbar'); ?>
 
@@ -59,14 +85,30 @@
         </div>
     </footer>
 
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
-    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
-
     <script>
         new DataTable('#example');
+
+        let fadeTarget = $(".loading");
+
+        function show_loading() {
+            fadeTarget.css("display", "block");
+        }
+
+        function hide_loading() {
+            let counter = fadeTarget.css("opacity");
+            let fadeEffect = setInterval(() => {
+                if (!counter) {
+                    fadeTarget.css("opacity") = 1;
+                }
+                if (counter > 0) {
+                    counter = counter - 0.1;
+                    fadeTarget.css("opacity", counter);
+                } else {
+                    clearInterval(fadeEffect);
+                    fadeTarget.css("display", "none");
+                }
+            }, 100);
+        }
     </script>
 </body>
 
