@@ -12,6 +12,9 @@ class ZIController extends BaseController
 
     public function index()
     {
-        return view('errors/html/production');
+        $data = [
+            'title' => 'Dokumen ZI'
+        ];
+        return view('pages/zi/index', $data);
     }
 }
