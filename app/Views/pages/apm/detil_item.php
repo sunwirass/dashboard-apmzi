@@ -2,7 +2,6 @@
 <?= $this->extend('layout/template'); ?>
 
 <?= $this->section('content'); ?>
-
 <section class="features-icons bg-light">
     <div class="container">
         <div class="row">
