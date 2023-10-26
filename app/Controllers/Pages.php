@@ -12,13 +12,4 @@ class Pages extends BaseController
 
         return view('pages/home', $data);
     }
-
-    public function mainZI()
-    {
-        $data = [
-            'title' => 'Dokumen ZI'
-        ];
-
-        return view('pages/zi/index', $data);
-    }
 }

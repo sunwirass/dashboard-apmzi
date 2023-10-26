@@ -4,7 +4,7 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class KriteriaModel extends Model
+class APMKriteriaModel extends Model
 {
     protected $table = 'kriteria';
 }
