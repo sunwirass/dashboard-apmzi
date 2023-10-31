@@ -8,7 +8,7 @@ $db = \Config\Database::connect();
 
 class APMItemModel extends Model
 {
-    protected $table = 'item';
+    protected $table = 'apm_item';
 
     public function getItemByIndikator($id_indikator)
     {

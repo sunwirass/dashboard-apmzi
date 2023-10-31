@@ -6,5 +6,5 @@ use CodeIgniter\Model;
 
 class APMKriteriaModel extends Model
 {
-    protected $table = 'kriteria';
+    protected $table = 'apm_kriteria';
 }

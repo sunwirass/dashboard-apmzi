@@ -6,7 +6,7 @@ use CodeIgniter\Model;
 
 class APMIndikatorModel extends Model
 {
-    protected $table = 'indikator';
+    protected $table = 'apm_indikator';
 
     public function getAssessmentByIndikator($id_indikator)
     {
