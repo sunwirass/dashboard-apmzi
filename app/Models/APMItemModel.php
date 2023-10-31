@@ -12,7 +12,7 @@ class APMItemModel extends Model
 
     public function getItemByIndikator($id_indikator)
     {
-        $strQueryItem = "SELECT * FROM item WHERE id_indikator=" . $id_indikator;
+        $strQueryItem = "SELECT * FROM apm_item WHERE id_indikator=" . $id_indikator;
         $query   = $this->db->query($strQueryItem);
         $results = $query->getResult();
         return $results;
