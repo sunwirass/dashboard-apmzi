@@ -18,12 +18,12 @@
                                 Zona Integritas
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="/zi">Area I</a></li>
-                                <li><a class="dropdown-item" href="/zi">Area II</a></li>
-                                <li><a class="dropdown-item" href="/zi">Area III</a></li>
-                                <li><a class="dropdown-item" href="/zi">Area IV</a></li>
-                                <li><a class="dropdown-item" href="/zi">Area V</a></li>
-                                <li><a class="dropdown-item" href="/zi">Area VI</a></li>
+                                <li><a class="dropdown-item" href="/zi/area-1">Area I</a></li>
+                                <li><a class="dropdown-item" href="/zi/area-2">Area II</a></li>
+                                <li><a class="dropdown-item" href="/zi/area-3">Area III</a></li>
+                                <li><a class="dropdown-item" href="/zi/area-4">Area IV</a></li>
+                                <li><a class="dropdown-item" href="/zi/area-5">Area V</a></li>
+                                <li><a class="dropdown-item" href="/zi/area-6">Area VI</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
@@ -39,6 +39,11 @@
                                 <li><a class="dropdown-item" href="/apm/kualitas-pelayanan">Kualitas Pelayanan</a></li>
                                 <li><a class="dropdown-item" href="/apm/dokumentasi-arsip">Dokumentasi / Arsip</a></li>
                             </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/sk" role="button">
+                                Surat Keputusan
+                            </a>
                         </li>
                     </ul>
                 </div>

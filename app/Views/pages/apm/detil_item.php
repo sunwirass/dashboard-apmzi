@@ -30,7 +30,7 @@
                                     <?php } ?>
                                 </ul>
                             </td>
-                            <td><a href="#" class="btn btn-success text-center">Lihat Data Dukung</a></td>
+                            <td><a href="<?= $item->url; ?>" target="_blank" class="btn btn-success text-center">Lihat Data Dukung</a></td>
                         </tr>
                     <?php } ?>
                 </tbody>

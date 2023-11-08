@@ -1,157 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
+<!-- Load template -->
+<?= $this->extend('layout/template'); ?>
 
-<head>
-    <title><?= $title; ?></title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--===============================================================================================-->
-    <link rel="icon" type="image/png" href="<?= base_url() ?>images/icons/favicon.ico" />
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="<?= base_url() ?>vendor/bootstrap/css/bootstrap.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="<?= base_url() ?>fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="<?= base_url() ?>fonts/iconic/css/material-design-iconic-font.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="<?= base_url() ?>vendor/animate/animate.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="<?= base_url() ?>vendor/select2/select2.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="<?= base_url() ?>css/util.css">
-    <link rel="stylesheet" type="text/css" href="<?= base_url() ?>css/main.css">
-    <!--===============================================================================================-->
-    <!-- Bootstrap icons-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" type="text/css" />
-</head>
-
-<body>
-
-
-    <div class="bg-g1 size1 flex-w flex-col-c-sb p-l-15 p-r-15 p-t-55 p-b-35 respon1">
-        <span></span>
-        <div class="flex-col-c p-t-50 p-b-50">
-            <h3 class="l1-txt1 txt-center p-b-10">
-                Coming Soon
-            </h3>
-
-            <p class="txt-center l1-txt2 p-b-60">
-                Zona Integritas page is under construction.
-            </p>
-
-            <div class="flex-w flex-c cd100 p-b-82">
-                <div class="flex-col-c-m size2 how-countdown">
-                    <span class="l1-txt3 p-b-9 days">7</span>
-                    <span class="s1-txt1">Days</span>
-                </div>
-
-                <div class="flex-col-c-m size2 how-countdown">
-                    <span class="l1-txt3 p-b-9 hours">17</span>
-                    <span class="s1-txt1">Hours</span>
-                </div>
-
-                <div class="flex-col-c-m size2 how-countdown">
-                    <span class="l1-txt3 p-b-9 minutes">50</span>
-                    <span class="s1-txt1">Minutes</span>
-                </div>
-
-                <div class="flex-col-c-m size2 how-countdown">
-                    <span class="l1-txt3 p-b-9 seconds">39</span>
-                    <span class="s1-txt1">Seconds</span>
-                </div>
+<?= $this->section('content'); ?>
+<section class="features-icons bg-light text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1>ZONA INTEGRITAS</h1>
+                <p>Pemaparan Lembar Kerja Elektronik (LKE) Evaluasi Zona Integritas Menuju WBK/WBBM pada Pengadilan Negeri Payakumbuh</p>
             </div>
-            <a href="/" class="flex-c-m s1-txt2 size3 how-btn"><i class="bi bi-house-fill"></i>&nbsp;&nbsp;&nbsp;&nbsp;Kembali Ke Halaman Utama</a>
+            <a href="https://drive.google.com/drive/folders/1_1VxgyH5RXjRf9dFPdi0u6cm98Yr_xcd?usp=drive_link" target="_blank" class="btn btn-primary mb-3 text-center">Buka Folder ZI</a>
+
+            <?php for ($i = 1; $i <= 6; $i++) { ?>
+                <a class="navbar-menu col-lg-4 mt-3" href="/zi/area-<?= $i; ?>">
+                    <div class="col-lg-12">
+                        <div class="features-icons-item mx-auto p-5">
+                            <div class="features-icons-icon d-flex"><i class="bi-files m-auto"></i></div>
+                            <h5 style="text-transform:uppercase;">Area <?= $i; ?></h5>
+                        </div>
+                    </div>
+                </a>
+            <?php } ?>
         </div>
-
-        <span class="s1-txt3 txt-center">
-            &copy; PN Payakumbuh 2023. Hak Cipta Dilindungi.
-        </span>
-
     </div>
-
-    <!-- Modal Login -->
-    <!-- <div class="modal fade" id="subscribe" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog" role="document" data-dismiss="modal">
-            <div class="modal-subscribe where1-parent bg0 bor2 size4 p-t-54 p-b-100 p-l-15 p-r-15">
-                <button class="btn-close-modal how-btn2 fs-26 where1 trans-04">
-                    <i class="zmdi zmdi-close"></i>
-                </button>
-
-                <div class="wsize1 m-lr-auto">
-                    <h3 class="m1-txt1 txt-center p-b-36">
-                        <span class="bor1 p-b-6">Subscribe</span>
-                    </h3>
-
-                    <p class="m1-txt2 txt-center p-b-40">
-                        Follow us for update now!
-                    </p>
-
-                    <form class="contact100-form validate-form">
-                        <div class="wrap-input100 m-b-10 validate-input" data-validate="Name is required">
-                            <input class="s1-txt4 placeholder0 input100" type="text" name="name" placeholder="Name">
-                            <span class="focus-input100"></span>
-                        </div>
-
-                        <div class="wrap-input100 m-b-20 validate-input" data-validate="Email is required: ex@abc.xyz">
-                            <input class="s1-txt4 placeholder0 input100" type="text" name="email" placeholder="Email">
-                            <span class="focus-input100"></span>
-                        </div>
-
-                        <div class="w-full">
-                            <button class="flex-c-m s1-txt2 size5 how-btn1 trans-04">
-                                Get Updates
-                            </button>
-                        </div>
-                    </form>
-
-                    <p class="s1-txt5 txt-center wsize2 m-lr-auto p-t-20">
-                        And don’t worry, we hate spam too! You can unsubcribe at anytime.
-                    </p>
-                </div>
-            </div>
-
-        </div>
-    </div> -->
-
-
-
-    <!--===============================================================================================-->
-    <script src="<?= base_url() ?>vendor/jquery/jquery-3.2.1.min.js"></script>
-    <!--===============================================================================================-->
-    <script src="<?= base_url() ?>vendor/bootstrap/js/popper.js"></script>
-    <script src="<?= base_url() ?>vendor/bootstrap/js/bootstrap.min.js"></script>
-    <!--===============================================================================================-->
-    <script src="<?= base_url() ?>vendor/select2/select2.min.js"></script>
-    <!--===============================================================================================-->
-    <script src="<?= base_url() ?>vendor/countdowntime/moment.min.js"></script>
-    <script src="<?= base_url() ?>vendor/countdowntime/moment-timezone.min.js"></script>
-    <script src="<?= base_url() ?>vendor/countdowntime/moment-timezone-with-data.min.js"></script>
-    <script src="<?= base_url() ?>vendor/countdowntime/countdowntime.js"></script>
-    <script>
-        $('.cd100').countdown100({
-            // Set Endtime here
-            // Endtime must be > current time
-            endtimeYear: 0,
-            endtimeMonth: 0,
-            endtimeDate: 7,
-            endtimeHours: 12,
-            endtimeMinutes: 0,
-            endtimeSeconds: 0,
-            timeZone: ""
-            // ex:  timeZone: "America/New_York", can be empty
-            // go to " http://momentjs.com/timezone/ " to get timezone
-        });
-    </script>
-    <!--===============================================================================================-->
-    <script src="<?= base_url() ?>vendor/tilt/tilt.jquery.min.js"></script>
-    <script>
-        $('.js-tilt').tilt({
-            scale: 1.1
-        })
-    </script>
-    <!--===============================================================================================-->
-    <script src="<?= base_url() ?>js/main.js"></script>
-
-</body>
-
-</html>
+</section>
+<?= $this->endSection(); ?>

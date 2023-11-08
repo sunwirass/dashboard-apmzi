@@ -87,6 +87,7 @@
 
     <script>
         new DataTable('#apm-item');
+        new DataTable('#zi-item');
 
         let fadeTarget = $(".loading");
 

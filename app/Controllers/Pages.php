@@ -12,4 +12,12 @@ class Pages extends BaseController
 
         return view('pages/home', $data);
     }
+
+    public function underConstruction()
+    {
+        $data = [
+            'title' => 'Page is Under Construction'
+        ];
+        return view('errors/html/under_construction', $data);
+    }
 }

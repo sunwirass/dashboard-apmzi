@@ -9,6 +9,8 @@
                 <h1>AKREDITASI PENJAMINAN MUTU</h1>
                 <p>Pemaparan checklist Akreditasi Penjaminan Mutu pada Pengadilan Negeri Payakumbuh berdasarkan kriteria pada masing-masing penilaian</p>
             </div>
+            <a href="https://drive.google.com/drive/folders/1jTVBVVO4a9FjYf6djcZqT9CWOW2r8M8L?usp=drive_link" target="_blank" class="btn btn-primary mb-3 text-center">Buka Folder APM</a>
+
             <?php for ($i = 0; $i <= 6; $i++) { ?>
                 <?php if ($i == 0) { ?>
                     <a class="navbar-menu col-lg-12" href="/apm/<?= $kriteria[$i]['slug']; ?>">
